@@ -1,2 +1,15 @@
-<div id="<%= dom_id group %>">
-</div>
+<%= link_to group do %>
+  <div id="<%= dom_id group %>" >
+    <p>
+      <strong><%= group.icon %></strong>
+    </p>
+
+    <p >
+      <strong><%= group.name %></strong>
+    </p>
+
+    <p >Total:
+      <strong>$ </strong>
+    </p>
+  </div>
+<% end %>

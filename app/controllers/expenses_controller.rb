@@ -3,7 +3,8 @@ class ExpensesController < ApplicationController
 
   # GET /expenses or /expenses.json
   def index
-    @expenses = Expense.all
+    @group = current_user.groups.find(params[:category_id])
+    @expenses = @group.ordered_transactions
   end
 
   # GET /expenses/1 or /expenses/1.json
@@ -11,7 +12,8 @@ class ExpensesController < ApplicationController
 
   # GET /expenses/new
   def new
-    @expense = Expense.new
+    @expense = current_user.expenses.build
+    @expense.group_ids = @group.id
   end
 
   # GET /expenses/1/edit
@@ -19,7 +21,7 @@ class ExpensesController < ApplicationController
 
   # POST /expenses or /expenses.json
   def create
-    @expense = Expense.new(expense_params)
+    @expense = current_user.expenses.build(expense_params)
 
     respond_to do |format|
       if @expense.save
@@ -64,6 +66,6 @@ class ExpensesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def expense_params
-    params.fetch(:expense, {})
+    params.fetch(:expense).permit(:name, :amount, group_ids: [])
   end
 end
