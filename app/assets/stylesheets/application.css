@@ -76,6 +76,36 @@ a{
   background-color:var(--white)
 }
 
+.warning{
+  background-color: var(--red);
+  font-size: 1.5em;
+  color:black;
+}
+/* ------------SIGN IN------------ */
+.field{
+  width: 90%;
+  padding:0.7em 0.5em;
+  font-size: 0.8em;
+}
+
+.sign-up{
+  display:flex;
+  flex-direction: column;
+  width:22%;
+  margin-top: 1em;
+  margin-left: 65%;
+}
+
+.sign-up a{
+  padding: 12px;
+  font-weight:bold ;
+  font-size: 0.8em;
+  border: none;
+  background-color: var(--green);
+  color:black;
+  text-align: center;
+}
+
 /* ------------CATEGORY STYLES------------ */
 .main-title{
   background-color: var(--blue);
@@ -113,6 +143,7 @@ a{
   align-items: center;
   width:80%;
   gap:1em;
+  text-transform: uppercase;
 }
 
 .cat-title h1{
@@ -121,18 +152,19 @@ a{
   text-align: center;
 }
 
-/* --------------------TRANSACTIONS------------------------ */
+/* --------------------TRANSACTIONS page------------------------ */
 .group-details{
-  margin: 2em 1em;
+  margin: 5em 5em;
   display:flex;
   flex-direction: column;
   gap:2em;
+
 }
 
 .group-expenses{
   margin-top: 2em;
   gap: 2em;
-  background-color: var(--white);
+  
 }
 
 .budget-title{
@@ -140,6 +172,7 @@ a{
   text-align: center;
   font-size: 1.5em;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .all-btns{
@@ -181,13 +214,68 @@ a{
   color: black;
 }
 
+/* ----expense detais on transaction page--- */
+.expenses{
+  display: flex;
+  flex-direction: column;
+  gap:2em;
+  margin-top: 3em;
+}
+
+.expense-item{
+  display: flex;
+  background-color: var(--white);
+  gap:2em;
+  align-items: center;
+}
+
+.expense-detail{
+  display: flex;
+  gap:5em;
+  text-transform: capitalize;
+  padding:10px;
+  width:60%; 
+}
+
+.expense-detail h2{
+  width: 25%;
+}
+
+.expense-detail h3{
+  font-size: 1.3em;
+}
+
+.expense-btn{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin: 0.4em 0;
+  margin-left: 15%;
+}
+
+.expense-btn a{
+  font-size: 20px;
+}
+
+.expense-btn a:hover, .expense-btn button:hover{
+  color: var(--green);
+}
+
+.expense-btn button{
+  background-color: var(--white);
+  border: none;
+  font-size: 18px;
+  text-align: right;
+  color: var(--text);
+}
+
+
 /* --------------------NEW Category PAGE------------------------ */
 
 .frm-categ{
   display: flex;
   flex-direction: column;
   margin-top: 5em;
-  
 }
 
 .frm-categ input, .frm-categ select {
@@ -268,6 +356,3 @@ input:hover , select:hover{
 
 /* --------------------NEW TRANSACTION PAGE------------------------ */
 
-.expense-item{
-  background-color: var(--green);
-}

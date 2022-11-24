@@ -13,16 +13,22 @@
   
    <div class="budget-title">BUDGET LIST FOR <%= @group.name %></div>
     
-  <div class="expense-item">
+  <div class="expenses">
     <% @group.expenses.each do |expense| %>
-      
-        <h2> <%= expense.name%></h2>
-        <h2> $ <%= expense.amount%><h2>
-      
-    <% end %>
+      <div class="expense-item">
+        <div class="expense-detail">
+          <h2> <%= expense.name%></h2>
+          <h3> $ <%= expense.amount%><h3>
+        </div>
 
-        <%# <%= link_to "✎" "Edit this expense", edit_group_expense_url(@group, @expenses) %> 
-        <%= button_to "Destroy this expense", @expense, method: :delete %>
+        <div class="expense-btn">
+          <%= link_to "✎" "Edit this expense", edit_group_expense_path(@group)%>
+
+          <%= button_to"🚮" "Delete this expense", , method: :delete %>
+        </div>
+      </div>
+    <% end %>
+ 
   
    </div>
 </div>
