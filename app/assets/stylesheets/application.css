@@ -13,3 +13,261 @@
  *= require_tree .
  *= require_self
  */
+
+ html {
+  width: 100%;
+  box-sizing: border-box;
+  color: var(--text);
+  font-family: proxima-nova, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  height: 100%;
+  background-color:#b1c6ca57;
+}
+
+body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --text: #434b54;
+  --blue: #3778c2;
+  --green: #51b523;
+  --grey: grey;
+  --red: #f21905;
+  --white: aliceblue;
+
+}
+
+.navbar {
+  display: flex;
+  padding:1em 2em;
+  padding-right: 3em;
+  background-color: var(--blue);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar h1{
+  text-align: center;
+  font-size: 3em;
+}
+
+.navbar a {
+  background-color: var(--blue);
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+a{
+  text-decoration: none;
+  color:var(--text);
+  background-color:var(--white)
+}
+
+/* ------------CATEGORY STYLES------------ */
+.main-title{
+  background-color: var(--blue);
+}
+
+.new-cat-btn{
+ margin: 2em 0;
+ padding: 0.7em;
+ margin-left: 85%;
+ background-color:var(--green);
+ border: none;
+}
+
+.new-cat-btn a{
+ background-color:var(--green);
+ font-style: italic;
+ font-weight: bold;
+}
+
+.all-groups{
+  display: flex;
+  flex-direction: column;
+  gap:1.5em;
+}
+
+.group-item{
+  display: flex;
+  padding: 1.5em 2em;
+  align-items: center;
+  gap:3em
+}
+
+.cat-title{
+  display: flex;
+  align-items: center;
+  width:80%;
+  gap:1em;
+}
+
+.cat-title h1{
+  font-size: xx-large;
+  width:5%;
+  text-align: center;
+}
+
+/* --------------------TRANSACTIONS------------------------ */
+.group-details{
+  margin: 2em 1em;
+  display:flex;
+  flex-direction: column;
+  gap:2em;
+}
+
+.group-expenses{
+  margin-top: 2em;
+  gap: 2em;
+  background-color: var(--white);
+}
+
+.budget-title{
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.all-btns{
+  display: flex;
+  flex-direction: column;
+  gap:0.8em;
+  align-items: center;
+  margin: 2em;
+}
+
+.trans-btn{
+  width:25%;
+  background-color:var(--green);
+  padding:10px;
+  border: none;
+  font-weight:bold ;
+  font-size: 1em;
+}
+
+.trans-btn a{
+  background-color: var(--green);
+}
+
+.group-btns{
+  display: flex;
+  gap: 2em;
+}
+
+.group-btns button{
+  background-color:var(--blue);
+  padding:8px;
+  border: none;
+  font-weight:bold ;
+  font-size: 1em;
+ }
+
+.group-btns button a{
+  background-color: var(--blue);
+  color: black;
+}
+
+/* --------------------NEW Category PAGE------------------------ */
+
+.frm-categ{
+  display: flex;
+  flex-direction: column;
+  margin-top: 5em;
+  
+}
+
+.frm-categ input, .frm-categ select {
+  width: 90%;
+  padding:0.7em 0.5em;
+  font-size: 0.8em;
+}
+
+input:hover , select:hover{
+  border:2px solid var(--green)
+}
+
+.frm-categ form{
+  display: flex;
+  flex-direction: column;
+  gap:1.5em;
+  align-items: center;
+  font-size: 1.3em;
+}
+
+.frm-input {
+ display: flex;
+ width: 80%;
+ align-items: center;
+ justify-content: space-around;
+}
+
+.frm-categ form label{
+  width:30%;
+}
+
+.frm-submit{
+  width:25%;
+  margin-left: 55%;
+  
+}
+
+.frm-submit input{
+  font-weight:bold ;
+  font-size: 0.6em;
+  border: none;
+  background-color: var(--green);
+}
+
+.to-group{
+  background-color: var(--blue);
+  padding:8px;
+  border: none;
+  font-weight:bold ;
+  font-size: 1em;
+  width:20%;
+  margin-left: 66%;
+
+}
+
+.to-group a, .back-group a{
+  background-color: var(--blue);
+  color: black;
+}
+
+/* --------------------EDIT CATEGORY PAGE------------------------ */
+.edit-btns{
+  display: flex;
+    gap: 1em;
+    width: 80%;
+    justify-content: flex-end;
+    margin-left: 7%;
+}
+
+.back-group{
+  background-color: var(--blue);
+  padding:8px;
+  border: none;
+  font-weight:bold ;
+  font-size: 1em;
+  width:20%;
+ }
+
+/* --------------------NEW TRANSACTION PAGE------------------------ */
+
+.expense-item{
+  background-color: var(--green);
+}

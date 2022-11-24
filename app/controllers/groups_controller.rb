@@ -4,7 +4,7 @@ class GroupsController < ApplicationController
 
   # GET /groups or /groups.json
   def index
-    @groups = current_user.groups
+    @groups = current_user.groups.order(:id)
   end
 
   # GET /groups/1 or /groups/1.json
@@ -62,7 +62,7 @@ class GroupsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_group
-    @group = Group.find(params[:id])
+    @group = Group.find_by(id: params[:id])
   end
 
   # Only allow a list of trusted parameters through.

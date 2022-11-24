@@ -1,15 +1,21 @@
 <%= link_to group do %>
-  <div id="<%= dom_id group %>" >
-    <p>
-      <strong><%= group.icon %></strong>
-    </p>
+  <div class="group-item" >
+   <div class="cat-title">
+      <h2>
+        <strong><%= group.icon %></strong>
+      </h2>
 
-    <p >
-      <strong><%= group.name %></strong>
-    </p>
+      <h2>
+        <strong><%= group.name %></strong>
+      </h2>
+    </div>
 
-    <p >Total:
+    <strong >Total:
       <strong>$ </strong>
-    </p>
+    </strong>
   </div>
 <% end %>
+
+
+
+

@@ -1,10 +1,9 @@
 <h1>Editing expense</h1>
 
-<%= render "form", expense: @expense %>
+<%= render "editform", expense: @expense %>
 
 <br>
 
 <div>
-  <%= link_to "Show this expense", @expense %> |
-  <%= link_to "Back to expenses", expenses_path %>
+   <%= link_to "Back to expenses", group_expenses_path %>
 </div>

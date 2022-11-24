@@ -1,12 +1,51 @@
-<% provide(:title, "CATEGORY") %>
+<div class="navbar">
+  <h1 class="main-title">Transactions</h1>
+  <% if user_signed_in? %>
+     <%= link_to("Log out", destroy_user_session_path, method: :delete) %>    
+  <% end %>
+</div>
 
-<%= render @group %>
 
-<div>
- <%= link_to "Add New Transaction", new_group_expense_path(@group, @expense)%>
+<div class="group-details">
+      <%= render @group %>
 
-  <%= link_to "Edit this group", edit_group_path(@group) %> |
-  <%= link_to "Back to groups", groups_path %>
+      <div class="group-expenses">
+  
+   <div class="budget-title">BUDGET LIST FOR <%= @group.name %></div>
+    
+  <div class="expense-item">
+    <% @group.expenses.each do |expense| %>
+      
+        <h2> <%= expense.name%></h2>
+        <h2> $ <%= expense.amount%><h2>
+      
+    <% end %>
 
-  <%= button_to "Destroy this group", @group, method: :delete %>
+        <%# <%= link_to "✎" "Edit this expense", edit_group_expense_url(@group, @expenses) %> 
+        <%= button_to "Destroy this expense", @expense, method: :delete %>
+  
+   </div>
+</div>
+
+
+<div class="all-btns">
+
+          <button class="trans-btn"> 
+              <%= link_to "Add New Transaction", new_group_expense_path(@group, @expense)%>
+          </button>
+      
+          <div class="group-btns">
+              <button>
+                <%= link_to "Edit this category", edit_group_path(@group) %>
+              </button> 
+              
+              <button> 
+                <%= link_to "Back to categories", groups_path %>
+              </button>
+
+              
+              <%= button_to "Destroy this category", @group, method: :delete %>
+              
+          </div>
+      </div>
 </div>
