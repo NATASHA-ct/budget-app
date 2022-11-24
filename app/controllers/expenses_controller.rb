@@ -18,7 +18,10 @@ class ExpensesController < ApplicationController
   end
 
   # GET /expenses/1/edit
-  def edit; end
+  def edit
+   @group = current_user.groups.find_by(id: params[:group_id])
+    @expense = @group.expenses.find(params[:id])
+  end
 
   # POST /expenses or /expenses.json
   def create
