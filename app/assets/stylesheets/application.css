@@ -61,7 +61,7 @@ body {
 
 .navbar h1{
   text-align: center;
-  font-size: 3em;
+  font-size: 2.5em;
 }
 
 .navbar a {
@@ -77,9 +77,8 @@ a{
 }
 
 .warning{
-  background-color: var(--red);
   font-size: 1.5em;
-  color:black;
+  color:var(--red);
 }
 /* ------------SIGN IN------------ */
 .field{
@@ -109,6 +108,12 @@ a{
 /* ------------CATEGORY STYLES------------ */
 .main-title{
   background-color: var(--blue);
+}
+
+.user-name{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .new-cat-btn{
@@ -331,7 +336,7 @@ input:hover , select:hover{
 
 }
 
-.to-group a, .back-group a{
+.to-group a, .back-group a , .back-trans a{
   background-color: var(--blue);
   color: black;
 }
@@ -354,5 +359,48 @@ input:hover , select:hover{
   width:20%;
  }
 
-/* --------------------NEW TRANSACTION PAGE------------------------ */
+/* --------------------EDIT TRANSACTION PAGE------------------------ */
 
+.back-trans{
+  background-color: var(--blue);
+  padding:8px;
+  border: none;
+  font-weight:bold ;
+  font-size: 1em;
+  width:20%;
+  margin-left: 65%;
+ }
+
+ #all-btns-edit{
+  display: flex;
+  flex-direction: column;
+  gap:0.8em;
+  margin: 2em;
+}
+
+#all-btns-edit a{
+  background-color: var(--blue);
+  padding:8px;
+  border: none;
+  font-weight:bold ;
+  font-size: 1em;
+  width:20%;
+  margin-left: 68%;
+}
+
+#back-trans-edit{
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+  text-align: center;
+}
+
+/* #back-trans-edit a{
+  background-color: var(--blue);
+  padding:8px;
+  border: none;
+  font-weight:bold ;
+  font-size: 1em;
+  width:20%;
+  margin-left: 65%;
+ }  */

@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   resources :groups do
     resources :expenses
   end
-
+  delete 'groups/:group_id/expenses/:id', to: 'expenses#destroy'
 end
