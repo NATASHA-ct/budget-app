@@ -9,9 +9,9 @@ RSpec.describe Group, type: :model do
     ),
             @group = Group.create(
               user_id: 1,
-                name: 'Travel',
-                icon: '🚘'
-            )  
+              name: 'Travel',
+              icon: '🚘'
+            )
   end
 
   it '@group created should be valid' do
@@ -29,5 +29,4 @@ RSpec.describe Group, type: :model do
   it '@icon created should not  be valid' do
     expect(@group.icon).not_to eq(100)
   end
-
 end

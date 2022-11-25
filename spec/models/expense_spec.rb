@@ -9,17 +9,15 @@ RSpec.describe Expense, type: :model do
     ),
             @group = Group.create(
               user_id: 1,
-                name: 'Travel',
-                icon: '🚘'
+              name: 'Travel',
+              icon: '🚘'
             ),
             @expense = Expense.create(
-                user_id: 1,
-                name: 'Rice',
-                amount: 100,
-                group_id: 1
-
+              user_id: 1,
+              name: 'Rice',
+              amount: 100,
+              group_id: 1
             )
-           
   end
 
   it '@expense created should be valid' do

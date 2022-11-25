@@ -5,7 +5,7 @@ class ExpensesController < ApplicationController
   # GET /expenses or /expenses.json
   def index
     @group = current_user.groups.find(params[:group_id])
-    @expenses = @group.expenses.order(:id)
+    @expenses = @group.expenses..order(created_at: :desc)
   end
 
   # GET /expenses/1 or /expenses/1.json
@@ -19,7 +19,7 @@ class ExpensesController < ApplicationController
 
   # GET /expenses/1/edit
   def edit
-   @group = current_user.groups.find_by(id: params[:group_id])
+    @group = current_user.groups.find_by(id: params[:group_id])
     @expense = @group.expenses.find(params[:id])
   end
 
@@ -27,7 +27,7 @@ class ExpensesController < ApplicationController
   def create
     @group = current_user.groups.find_by(id: params[:group_id])
     @expense = current_user.expenses.build(expense_params)
-    
+
     respond_to do |format|
       if @expense.save
         format.html { redirect_to group_path(@group), notice: 'Expense was successfully created.' }
@@ -71,7 +71,6 @@ class ExpensesController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_expense
-
     @expense = Expense.find_by(id: params[:expense_id])
   end
 

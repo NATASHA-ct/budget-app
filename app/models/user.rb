@@ -6,6 +6,4 @@ class User < ApplicationRecord
 
   has_many :groups, dependent: :destroy, foreign_key: 'user_id'
   has_many :expenses, dependent: :destroy, foreign_key: 'user_id'
-
- 
 end
