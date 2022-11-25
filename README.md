@@ -15,8 +15,10 @@ Budget- App is a Ruby on Rails mobile web application that allows users to keep 
 - [Recipe list ,Food list, Public recipe list pages]
 - [Functionality to Generate a shopping list with total cost]
 
-## Live Demo
-- To be deployed
+
+## Live Demo Available click below...()
+
+[Live Demo Link](https://warm-beyond-66577.herokuapp.com/)
 
 ## Getting Started
 -To get a local copy up and running follow these simple example steps.
@@ -79,7 +81,7 @@ If you installed git you can clone the code to your machine, or download a ZIP o
   - run rspec spec
 
 ### Deployment
- - To be deployed
+ []
   
 ## Authors
 👤 **Natasha Tatenda Chirombe**
