@@ -6,7 +6,7 @@ class Group < ApplicationRecord
   validates :name, presence: true
   validates :icon, presence: true
 
-  def totalExpenses
+  def total_expenses
     expenses.sum(:amount)
   end
 end
