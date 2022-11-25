@@ -1,10 +1,41 @@
-<p style="color: green"><%= notice %></p>
+<div class="navbar">
+  <h1 class="main-title">Transactions</h1>
+  <% if user_signed_in? %>
+     <%= link_to("Log out", destroy_user_session_path, method: :delete) %>    
+  <% end %>
+</div>
 
-<%= render @group %>
 
-<div>
-  <%= link_to "Edit this group", edit_group_path(@group) %> |
-  <%= link_to "Back to groups", groups_path %>
+<div class="group-details">
+      <%= render @group %>
 
-  <%= button_to "Destroy this group", @group, method: :delete %>
+      <div class="group-expenses">
+  
+   <div class="budget-title">YOUR <%= @group.name %> EXPENSES</div>
+     
+  
+    <%= render "expenses/expenses" %>
+</div>
+
+
+<div class="all-btns">
+
+          <button class="trans-btn"> 
+              <%= link_to "Add New Transaction", new_group_expense_path(@group, @expense)%>
+          </button>
+      
+          <div class="group-btns">
+              <button>
+                <%= link_to "Edit this category", edit_group_path(@group) %>
+              </button> 
+              
+              <button> 
+                <%= link_to "Back to categories", groups_path %>
+              </button>
+
+              
+              <%= button_to "Destroy this category", @group, method: :delete %>
+              
+          </div>
+      </div>
 </div>

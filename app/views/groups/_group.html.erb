@@ -1,2 +1,21 @@
-<div id="<%= dom_id group %>">
-</div>
+<%= link_to group do %>
+  <div class="group-item" >
+   <div class="cat-title">
+      <h2>
+        <strong><%= group.icon %></strong>
+      </h2>
+
+      <h2 id="trans-cat-tittle">
+        <strong><%= group.name %></strong>
+      </h2>
+    </div>
+
+    <strong >Total:
+      <strong>$<%= group.total_expenses %></strong>
+    </strong>
+  </div>
+<% end %>
+
+
+
+

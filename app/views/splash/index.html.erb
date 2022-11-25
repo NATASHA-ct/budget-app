@@ -1,0 +1,25 @@
+<div class="navbar nav-splash">
+  <h1 class="main-title">Clever Budget</h1>
+  <div class='user-name nav-a-splash'>
+    <% if user_signed_in? %>
+      <%= link_to("Log out", destroy_user_session_path, method: :delete) %>  
+      <%= link_to "✐ Edit Profile", edit_user_registration_path %>
+     <% else %>
+      <%= link_to 'Log in', new_user_session_path, class: "splash-login" %>
+      <%= link_to 'Sign up', new_user_registration_path, class: "splash-signup" %>
+    <% end %>
+ </div>
+</div>
+
+ <button class="go-to-cat">
+    <% if user_signed_in?  %>
+      <%= link_to 'Go to Categories', groups_path, class: "splash-grp" %>
+     <% end %>
+ </button>
+
+<div id="splash-cont">
+  
+  <h2 id="splash-cont-hd">
+    BUDGET
+ </h2>
+</div>

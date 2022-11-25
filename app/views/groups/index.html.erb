@@ -1,22 +1,36 @@
-<h1>Categories</h1>
+<div class="navbar">
+  <h1 class="main-title">Categories</h1>
+  <div class='user-name'>
+    <% if user_signed_in? %>
+      <%= link_to("Log out", destroy_user_session_path, method: :delete) %>  
+      <%= link_to "✐ Edit your Profile", edit_user_registration_path %>
+    <% end %>
+ </div>
+</div>
 
-<%= link_to "Add a New Category", new_group_path %>
 
-<div>
+
+<button class ="new-cat-btn">
+  <%= link_to "Add a New Category", new_group_path %>
+</button>
+
+<div class= "all-groups">
   <% @groups.each do |group| %>
     <%= link_to group do %>
-      <div>
-        <p >
-          <strong><%= group.icon %></strong>
-        </p>
+      <div class="group-item">
+        <div class="cat-title">
+          <h2 id="cat-icon">
+            <strong><%= group.icon %></strong>
+          </h2>
 
-        <p >
-          <strong><%= group.name %></strong>
-        </p>
+          <p >
+            <strong><%= group.name %></strong>
+          </p>
+        </div>
 
-        <p>Total:
-          <strong>$ </strong>
-        </p>
+        <strong>Total:
+          <strong>$ <%= group.total_expenses%></strong>
+        </strong>
       </div>
     <% end %>
   <% end %>

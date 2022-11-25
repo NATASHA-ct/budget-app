@@ -1,0 +1,14 @@
+<div class="expenses">
+    <% @group.expenses.each do |expense| %>
+      <div class="expense-item">
+        <div class="expense-detail">
+          <h2> <%= expense.name%></h2>
+          <h3> $ <%= expense.amount%><h3>
+        </div>
+
+        <div class="expense-btn">
+          <%= link_to "✎" "Edit this expense", edit_group_expense_path(@group,expense)%>
+        </div>
+      </div>
+<% end %>
+</div>
