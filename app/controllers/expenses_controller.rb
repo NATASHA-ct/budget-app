@@ -5,7 +5,6 @@ class ExpensesController < ApplicationController
 
   # GET /expenses or /expenses.json
   def index
-    @group = current_user.groups.find(params[:group_id])
     @expenses = @group.expenses.order(created_at: :desc)
   end
 
@@ -19,7 +18,6 @@ class ExpensesController < ApplicationController
 
   # GET /expenses/1/edit
   def edit
-    @group = current_user.groups.find_by(id: params[:group_id])
     @expense = @group.expenses.find(params[:id])
   end
 
@@ -40,7 +38,6 @@ class ExpensesController < ApplicationController
 
   # PATCH/PUT /expenses/1 or /expenses/1.json
   def update
-    @group = current_user.groups.find_by(id: params[:group_id])
     @expense = @group.expenses.find(params[:id])
 
     respond_to do |format|
@@ -56,7 +53,6 @@ class ExpensesController < ApplicationController
 
   # DELETE /expenses/1 or /expenses/1.json
   def destroy
-    @group = current_user.groups.find_by(id: params[:group_id])
     @expense = @group.expenses.find(params[:id])
     @expense.destroy
 
