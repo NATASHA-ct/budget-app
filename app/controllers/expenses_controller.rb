@@ -14,7 +14,7 @@ class ExpensesController < ApplicationController
 
   # GET /expenses/new
   def new
-     @expense = @group.expenses.build
+    @expense = @group.expenses.build
   end
 
   # GET /expenses/1/edit
@@ -25,7 +25,7 @@ class ExpensesController < ApplicationController
 
   # POST /expenses or /expenses.json
   def create
-     @expense = current_user.expenses.build(expense_params)
+    @expense = current_user.expenses.build(expense_params)
 
     respond_to do |format|
       if @expense.save
