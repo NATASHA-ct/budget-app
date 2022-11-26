@@ -1,11 +1,12 @@
 class ExpensesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_expense, only: %i[show edit update destroy]
+  before_action :set_group
 
   # GET /expenses or /expenses.json
   def index
     @group = current_user.groups.find(params[:group_id])
-    @expenses = @group.expenses..order(created_at: :desc)
+    @expenses = @group.expenses.order(created_at: :desc)
   end
 
   # GET /expenses/1 or /expenses/1.json
@@ -13,8 +14,7 @@ class ExpensesController < ApplicationController
 
   # GET /expenses/new
   def new
-    @group = current_user.groups.find_by(id: params[:group_id])
-    @expense = @group.expenses.build
+     @expense = @group.expenses.build
   end
 
   # GET /expenses/1/edit
@@ -25,8 +25,7 @@ class ExpensesController < ApplicationController
 
   # POST /expenses or /expenses.json
   def create
-    @group = current_user.groups.find_by(id: params[:group_id])
-    @expense = current_user.expenses.build(expense_params)
+     @expense = current_user.expenses.build(expense_params)
 
     respond_to do |format|
       if @expense.save
@@ -70,6 +69,10 @@ class ExpensesController < ApplicationController
   private
 
   # Use callbacks to share common setup or constraints between actions.
+  def set_group
+    @group = current_user.groups.find_by(id: params[:group_id])
+  end
+
   def set_expense
     @expense = Expense.find_by(id: params[:expense_id])
   end
