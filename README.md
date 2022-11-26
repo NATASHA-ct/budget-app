@@ -16,9 +16,9 @@ Budget- App is a Ruby on Rails mobile web application that allows users to keep 
 - [Functionality to Generate a shopping list with total cost]
 
 
-## Live Demo Available click below...()
+## Live Demo will be available ..()i
 
-[Live Demo Link](https://warm-beyond-66577.herokuapp.com/)
+[Live Demo Link]()
 
 ## Getting Started
 -To get a local copy up and running follow these simple example steps.
