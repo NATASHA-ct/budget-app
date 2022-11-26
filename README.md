@@ -1,285 +1,127 @@
-<a name="readme-top"></a>
+# BUDGET APP
 
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
+Budget- App is a Ruby on Rails mobile web application that allows users to keep track of their expenses and categories. have a list of transactions associated with a category, so that the user can see how much money it spent and on what. Manage your own money, manage your own life.
 
-Modify this file to match your project and remove sections that don't apply.
+## Built With
 
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
+- Ruby
+- Rails
+- Postgresql
+- Linters
 
-After you're finished please remove all the comments and instructions!
--->
+### Key Features
 
-<div align="center">
+- [Log in and registration of the user]
+- [Recipe list ,Food list, Public recipe list pages]
+- [Functionality to Generate a shopping list with total cost]
 
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
 
-  <h3><b>Microverse README Template</b></h3>
+## Live Demo Available click below...()
 
-</div>
+[Live Demo Link](https://warm-beyond-66577.herokuapp.com/)
 
-<!-- TABLE OF CONTENTS -->
-
-# 📗 Table of Contents
-
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
-- [📝 License](#license)
-
-<!-- PROJECT DESCRIPTION -->
-
-# 📖 [your_project_name] <a name="about-project"></a>
-
-> Describe your project in 1 or 2 sentences.
-
-**[your_project__name]** is a...
-
-## 🛠 Built With <a name="built-with"></a>
-
-### Tech Stack <a name="tech-stack"></a>
-
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
-
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
-
-<!-- Features -->
-
-### Key Features <a name="key-features"></a>
-
-> Describe between 1-3 key features of the application.
-
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
-
-## 💻 Getting Started <a name="getting-started"></a>
-
-> Describe how a new developer could make use of your project.
-
-To get a local copy up and running, follow these steps.
+## Getting Started
+-To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-In order to run this project you need:
+- A Command Line Interface.
+- Having Ruby installed.
+- Setup Rails
+- Postgresql
+- A code editor like Visual Studio Clone.
+- Git installed.
+- 
 
-<!--
-Example command:
+To check if you have Git, Postgres and Ruby installed you can use the commands below:
 
-```sh
- gem install rails
-```
- -->
+ ```sh
+   $ git --version
+   $ ruby --version && irb
+   ```
+If you don't have Ruby, you can find a complete list of ways to install Ruby, including using third-party tools like rvm, see:
 
-### Setup
+(https://www.ruby-lang.org/en/downloads/)
+### 🛠 Installation & Set Up
 
-Clone this repository to your desired folder:
+If you installed git you can clone the code to your machine, or download a ZIP of all the files directly.
 
-<!--
-Example commands:
 
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
+- Open the [Repository Link]https://github.com/NATASHA-ct/budget-app.git of this project in GitHub.
+
+- Once the files are on your machine, open capstone-ruby folder in [Visual Studio Code](https://code.visualstudio.com/).
 
 ### Install
+ Start by cloning the repository.
+ 
+- https://github.com/NATASHA-ct/budget-app.git
 
-Install this project with:
+  Navigate to the created folder.
 
-<!--
-Example command:
+- Initialize your project with Git.
+- Make sure that your project has Postgres database set up.
+- Run rails server and visi thttp://127.0.0.1:3000/ in your browser!
 
-```sh
-  cd my-project
-  gem install
-```
---->
+  ### run the following in your terminal:
+  - gem install rails
+  - gem install pg
+  - bundle install (use this whenever you want add a gem in your gem file)
+  - rails db:create
+  - change your database password to suit yours in database.yml
+  
+  
 
 ### Usage
+--Once you have your repository cloned on your machine, feel free to modify it as needed.
+- To add your own page
 
-To run the project, execute the following command:
-
-<!--
-Example command:
-
-```sh
-  rails server
-```
---->
-
-### Run tests
-
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
+### Testing with Rspec and Capybara
+  - In your terminal run > 
+     bundle exec rspec
+  - run rspec spec
 
 ### Deployment
+ []
+  
+## Authors
+👤 **Natasha Tatenda Chirombe**
 
-You can deploy this project using:
+- GitHub: [@NATASHA-ct]((https://github.com/NATASHA-ct)
+- Twitter: [@NatashaChirombe]
+- LinkedIn: [Natasha Chirombe](linkedin.com/in/natasha-chirombe-1531aa17b)
 
-<!--
-Example:
 
-```sh
-
-```
- -->
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- AUTHORS -->
-
-## 👥 Authors <a name="authors"></a>
-
-> Mention all of the collaborators of this project.
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
-
-## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
-
-## 🤝 Contributing <a name="contributing"></a>
+## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## Show your support
 
-<!-- SUPPORT -->
+Give a ⭐️ if you like this project!
 
-## ⭐️ Show your support <a name="support"></a>
+## Acknowledgments
 
-> Write a message to encourage readers to support your project
+Web Design
+All the template colors, font, and layout distribution for the whole project were designed by Gregoire Vella on Behance. A link to the project can be found here. Check Gregoire for more amazing GUI and Graphic designs!
 
-If you like this project...
+-Hat tip to all documentations used
+-Inspiration 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGEMENTS -->
+## ❓ FAQ
 
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
+#### [Question_1] Do I need to have a program to manage the database. 
 
-I would like to thank...
+##### [Answer_1] Yes you need postgesql or sqllite ,check installation online.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+#### [Question_2] Can I access the owner database .
 
-<!-- FAQ (optional) -->
+##### [Answer_2]No because its on their local database .
 
-## ❓ FAQ <a name="faq"></a>
+## 📝 License
+This project is MIT licensed.
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
-
-## 📝 License <a name="license"></a>
-
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+NOTE: we recommend using the MIT license - you can set it up quickly by using templates available on GitHub. You can also use any other license if you wish.

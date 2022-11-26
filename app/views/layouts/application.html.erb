@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BudgetApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+      <div>
+      <p class="warning notice"><%= notice %></p>
+      <p class="warning alert"><%= alert %></p>
+    </div> 
+    <%= yield %>
+   
+  </body>
+</html>

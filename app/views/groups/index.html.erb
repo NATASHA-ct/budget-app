@@ -1,0 +1,38 @@
+<div class="navbar">
+  <h1 class="main-title">Categories</h1>
+  <div class='user-name'>
+    <% if user_signed_in? %>
+      <%= link_to("Log out", destroy_user_session_path, method: :delete) %>  
+      <%= link_to "✐ Edit your Profile", edit_user_registration_path %>
+    <% end %>
+ </div>
+</div>
+
+
+
+<button class ="new-cat-btn">
+  <%= link_to "Add a New Category", new_group_path %>
+</button>
+
+<div class= "all-groups">
+  <% @groups.each do |group| %>
+    <%= link_to group do %>
+      <div class="group-item">
+        <div class="cat-title">
+          <h2 id="cat-icon">
+            <strong><%= group.icon %></strong>
+          </h2>
+
+          <p >
+            <strong><%= group.name %></strong>
+          </p>
+        </div>
+
+        <strong>Total:
+          <strong>$ <%= group.total_expenses%></strong>
+        </strong>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+

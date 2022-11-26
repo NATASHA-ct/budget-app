@@ -1,0 +1,17 @@
+ <div class="navbar">
+  <h1 class="main-title">Edit Category</h1>
+  <% if user_signed_in? %>
+     <%= link_to("Log out", destroy_user_session_path, method: :delete) %>    
+  <% end %>
+</div>
+
+<div class="frm-categ">
+    <%= render "form", group: @group %>
+
+    <br>
+
+    <div class="edit-btns">
+      <button class="back-group"><%= link_to "Show this group", @group %> </button>
+     <button class="back-group"> <%= link_to "Back to groups", groups_path %></button>
+    </div>
+</div>

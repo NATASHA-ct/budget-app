@@ -1,0 +1,32 @@
+<%= form_with(model: [@group, @expense]) do |form| %>
+  <% if expense.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(expense.errors.count, "error") %> prohibited this expense from being saved:</h2>
+
+      <ul>
+        <% expense.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="frm-input">
+    <%= form.label :name,"Enter transaction name", style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="frm-input">
+    <%= form.label :amount,"Enter budget amount", style: "display: block" %>
+    <%= form.number_field :amount %>
+  </div>
+
+  <div class="frm-input">
+    <%= form.label "Choose the category" %>
+     <%=form.collection_select :group_id, Group.order(:name), :id, :name  %>
+  </div>
+
+  <div class="frm-submit">
+    <%= form.submit %>
+  </div>
+<% end %>

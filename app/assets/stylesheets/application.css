@@ -1,0 +1,747 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+html {
+  width: 100%;
+  box-sizing: border-box;
+  color: var(--text);
+  font-family: proxima-nova, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  height: 100%;
+  background-color: #b1c6ca57;
+}
+
+body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --text: #434b54;
+  --blue: #3778c2;
+  --green: #51b523;
+  --grey: grey;
+  --red: #f21905;
+  --white: aliceblue;
+}
+
+.navbar {
+  display: flex;
+  padding: 1em 2em;
+  padding-right: 3em;
+  background-color: var(--blue);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar h1 {
+  text-align: center;
+  font-size: 2.5em;
+}
+
+/* all desktop links--- */
+a {
+  text-decoration: none;
+  color: var(--text);
+  background-color: var(--white);
+}
+
+.navbar a {
+  background-color: var(--blue);
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.go-to-cat a {
+  background-color: var(--green);
+  font-weight: bold;
+}
+
+.sign-up a {
+  padding: 12px;
+  font-weight: bold;
+  font-size: 0.8em;
+  border: none;
+  background-color: var(--green);
+  color: black;
+  text-align: center;
+}
+
+.user-name a {
+  border: 1px solid rgb(93 110 135);
+  border-radius: 9%;
+  padding: 4px;
+}
+
+.new-cat-btn a {
+  background-color: var(--green);
+  font-style: italic;
+  font-weight: bold;
+}
+
+.trans-btn a {
+  background-color: var(--green);
+}
+
+.to-group a,
+.back-group a,
+.back-trans a {
+  background-color: var(--blue);
+  color: black;
+}
+
+.expense-btn a {
+  font-size: 20px;
+}
+
+a:hover {
+  color: var(--green);
+}
+
+.group-btns button a {
+  background-color: var(--blue);
+  color: black;
+}
+
+.go-to-cat a:hover {
+  color: #0c9cf0;
+}
+
+#all-btns-edit a {
+  background-color: var(--blue);
+  padding: 8px;
+  border: none;
+  font-weight: bold;
+  font-size: 1em;
+  width: 20%;
+  margin-left: 68%;
+}
+
+/* ---------------------- */
+.go-to-cat {
+  background-color: var(--green);
+  padding: 10px;
+  border: none;
+  margin-top: 2em;
+}
+
+.warning {
+  font-size: 1.5em;
+  color: var(--red);
+}
+
+/* --------------splash------------- */
+#splash-cont {
+  background-image: url(/assets/LOGOA.png);
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: 536px 584px;
+  background-position: center;
+  margin-top: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#splash-cont-hd {
+  font-size: 3em;
+  margin-left: 2em;
+  color: #0d77b0;
+}
+
+/* ------------SIGN IN------------ */
+.field {
+  width: 90%;
+  padding: 0.7em 0.5em;
+  font-size: 0.8em;
+}
+
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  width: 22%;
+  margin-top: 1em;
+  margin-left: 65%;
+}
+
+/* ------------CATEGORY STYLES------------ */
+.main-title {
+  background-color: var(--blue);
+}
+
+.user-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1em;
+}
+
+.new-cat-btn {
+  margin: 2em 0;
+  padding: 0.7em;
+  margin-left: 85%;
+  background-color: var(--green);
+  border: none;
+}
+
+.all-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  margin: 20px 2em;
+}
+
+.group-item {
+  display: flex;
+  padding: 1.5em 2em;
+  align-items: center;
+  gap: 3em;
+}
+
+.cat-title {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  gap: 1em;
+  text-transform: uppercase;
+}
+
+.cat-title h2 {
+  font-size: x-large;
+  width: 15%;
+  text-align: center;
+}
+
+#trans-cat-tittle {
+  font-size: x-large;
+  width: 30%;
+  text-align: center;
+}
+
+/* --------------------TRANSACTIONS page------------------------ */
+.group-details {
+  margin: 5em 5em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.group-expenses {
+  margin-top: 2em;
+  gap: 2em;
+}
+
+.budget-title {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.all-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  align-items: center;
+  margin: 2em;
+}
+
+.trans-btn {
+  width: 25%;
+  background-color: var(--green);
+  padding: 10px;
+  border: none;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.group-btns {
+  display: flex;
+  gap: 2em;
+}
+
+.group-btns button {
+  background-color: var(--blue);
+  padding: 8px;
+  border: none;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+/* ----expense detais on transaction page--- */
+.expenses {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-top: 3em;
+}
+
+.expense-item {
+  display: flex;
+  background-color: var(--white);
+  gap: 2em;
+  align-items: center;
+}
+
+.expense-detail {
+  display: flex;
+  gap: 5em;
+  text-transform: capitalize;
+  padding: 10px;
+  width: 60%;
+}
+
+.expense-detail h2 {
+  width: 25%;
+  text-transform: lowercase;
+  font-weight: normal;
+}
+
+.expense-detail h3 {
+  font-size: 1.3em;
+  font-weight: normal;
+}
+
+.expense-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin: 0.4em 0;
+  margin-left: 15%;
+}
+
+.expense-btn button {
+  background-color: var(--white);
+  border: none;
+  font-size: 18px;
+  text-align: right;
+  color: var(--text);
+}
+
+/* --------------------NEW Category PAGE------------------------ */
+.frm-categ {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5em;
+}
+
+.frm-categ input,
+.frm-categ select {
+  width: 90%;
+  padding: 0.7em 0.5em;
+  font-size: 0.8em;
+}
+
+input:hover,
+select:hover {
+  border: 2px solid var(--green);
+}
+
+.frm-categ form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  align-items: center;
+  font-size: 1.3em;
+}
+
+.frm-input {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.remember {
+  justify-content: flex-end;
+}
+
+.remember #user_remember_me {
+  width: 20%;
+  height: 20px;
+}
+
+.frm-categ form label {
+  width: 30%;
+}
+
+.frm-submit {
+  width: 25%;
+  margin-left: 55%;
+}
+
+.frm-submit input {
+  font-weight: bold;
+  font-size: 0.6em;
+  border: none;
+  background-color: var(--green);
+}
+
+.to-group {
+  background-color: var(--blue);
+  padding: 8px;
+  border: none;
+  font-weight: bold;
+  font-size: 1em;
+  width: 20%;
+  margin-left: 66%;
+}
+
+/* --------------------EDIT CATEGORY PAGE------------------------ */
+.edit-btns {
+  display: flex;
+  gap: 1em;
+  width: 80%;
+  justify-content: flex-end;
+  margin-left: 7%;
+}
+
+.back-group {
+  background-color: var(--blue);
+  padding: 8px;
+  border: none;
+  font-weight: bold;
+  font-size: 1em;
+  width: 20%;
+}
+
+/* --------------------EDIT TRANSACTION PAGE------------------------ */
+
+.back-trans {
+  background-color: var(--blue);
+  padding: 8px;
+  border: none;
+  font-weight: bold;
+  font-size: 1em;
+  width: 20%;
+  margin-left: 65%;
+}
+
+#all-btns-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  margin: 2em;
+}
+
+#back-trans-edit {
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+  text-align: center;
+}
+
+/* --------------MOBILE DESIGN------------------ --------------------------------- */
+@media only screen and (max-width: 850px) {
+  .user-name {
+    width: 40%;
+  }
+
+  #splash-cont {
+    background-image: url(/assets/LOGOA.png);
+    background-repeat: no-repeat;
+    height: 76vh;
+    background-size: 471px 575px;
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #splash-cont-hd {
+    font-size: 3.3em;
+    margin-left: 1em;
+  }
+
+  .navbar {
+    padding: 1.6em 2em;
+  }
+
+  .nav-splash {
+    align-items: center;
+  }
+
+  .navbar a {
+    font-size: 1.2em;
+  }
+
+  .expense-btn a {
+    font-size: 18px;
+  }
+
+  .to-group a,
+  .back-group a,
+  .back-trans a {
+    background-color: var(--blue);
+    color: black;
+  }
+
+  .nav-a-splash {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .nav-a-splash a {
+    font-size: 0.8em;
+  }
+
+  .navbar h1 {
+    font-size: 1.8em;
+    text-align: left;
+  }
+
+  .go-to-cat {
+    background-color: var(--green);
+    padding: 10px;
+    border: none;
+  }
+
+  .go-to-cat a {
+    background-color: var(--green);
+    font-weight: bold;
+  }
+
+  .warning {
+    font-size: 1.2em;
+  }
+
+  /* ------------SIGN IN------------ */
+  .field {
+    width: 90%;
+    padding: 0.6em 0.5em;
+    font-size: 0.8em;
+  }
+
+  .sign-up a {
+    padding: 10px;
+    font-size: 0.7em;
+  }
+
+  /* ------------CATEGORY STYLES------------ */
+  .new-cat-btn {
+    padding: 0.7em;
+    margin-left: 65%;
+  }
+
+  .group-item {
+    display: flex;
+    padding: 1.5em 2em;
+    align-items: center;
+    gap: 2.5em;
+  }
+
+  .cat-title {
+    width: 90%;
+    gap: 1em;
+  }
+
+  #trans-cat-tittle {
+    font-size: 1em;
+    width: 70%;
+  }
+
+  #cat-icon {
+    margin-right: 20%;
+  }
+
+  /* --------------------TRANSACTIONS page------------------------ */
+  .group-details {
+    margin: 5em auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 85%;
+  }
+
+  .budget-title {
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    color: #1e5697;
+    text-transform: uppercase;
+  }
+
+  .trans-btn {
+    width: 55%;
+    padding: 10px;
+    font-size: 0.8em;
+  }
+
+  .group-btns {
+    gap: 0.5em;
+  }
+
+  .group-btns button {
+    background-color: var(--blue);
+    padding: 6px;
+    font-size: 0.8em;
+  }
+
+  .group-btns button a {
+    background-color: var(--blue);
+    color: black;
+  }
+
+  /* ----expense detals on transaction page--- */
+  .expense-detail {
+    text-transform: lowercase;
+    font-weight: normal;
+  }
+
+  .expense-detail h3 {
+    font-size: 1.2em;
+  }
+
+  .expense-btn {
+    gap: 0.5em;
+    margin: 0.4em 0;
+  }
+
+  .expense-btn button {
+    background-color: var(--white);
+    border: none;
+    font-size: 18px;
+    text-align: right;
+    color: var(--text);
+  }
+
+  .expense-btn a:hover,
+  .expense-btn button:hover {
+    color: var(--green);
+  }
+
+  /* --------------------NEW Category PAGE------------------------ */
+  .frm-categ {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5em;
+  }
+
+  .frm-categ input {
+    width: 80%;
+  }
+
+  input:hover,
+  select:hover {
+    border: 2px solid var(--green);
+  }
+
+  .frm-categ form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    align-items: center;
+    font-size: 1.3em;
+  }
+
+  .frm-input {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .frm-categ form label {
+    width: 30%;
+  }
+
+  .frm-submit {
+    width: 60%;
+    margin-left: 55%;
+  }
+
+  .frm-submit input {
+    font-weight: bold;
+    font-size: 0.6em;
+    border: none;
+    background-color: var(--green);
+    width: 80%;
+  }
+
+  .to-group {
+    width: 36%;
+    margin-left: 58%;
+  }
+
+  /* --------------------EDIT CATEGORY PAGE------------------------ */
+  .edit-btns {
+    display: flex;
+    gap: 1em;
+    width: 80%;
+    justify-content: flex-end;
+    margin-left: 7%;
+  }
+
+  .back-group {
+    background-color: var(--blue);
+    padding: 8px;
+    border: none;
+    font-weight: bold;
+    font-size: 1em;
+    width: 20%;
+  }
+
+  /* --------------------EDIT TRANSACTION PAGE------------------------ */
+  .back-trans {
+    background-color: var(--blue);
+    padding: 8px;
+    border: none;
+    font-weight: bold;
+    font-size: 1em;
+    width: 20%;
+    margin-left: 65%;
+  }
+
+  #all-btns-edit {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    margin: 2em;
+  }
+
+  #all-btns-edit a {
+    background-color: var(--blue);
+    padding: 8px;
+    border: none;
+    font-weight: bold;
+    font-size: 1em;
+    width: 20%;
+    margin-left: 68%;
+  }
+
+  #back-trans-edit {
+    display: flex;
+    flex-direction: column;
+    margin: 2em;
+    text-align: center;
+  }
+}
