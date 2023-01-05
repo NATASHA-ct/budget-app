@@ -1,6 +1,6 @@
 # BUDGET APP
 
-Budget- App is a Ruby on Rails mobile web application that allows users to keep track of their expenses and categories.The user can add a list of transactions associated with a category, so that the user can see how much money they spent and on what. Manage your own money, manage your own life!
+Budget- App is a Ruby on Rails mobile web application that helps users manage their expenses by categorizing them and keeping track of transactions. The application allows the user to see how much money they have spent in each category, helping them to make informed decisions about their spending habits. The goal of the application is to empower users to take control of their finances and manage their lives effectively
 
 ## Built With
 
